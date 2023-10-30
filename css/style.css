@@ -1,3 +1,10 @@
+/* CUSTOM-PROPERETY */
+:root {
+  --text-color: #333;
+  --accent-color-green: #0a775f;
+  --outline-color: var(--accent-color-green);
+}
+
 
 /* FONTS */
 @font-face {
@@ -27,11 +34,6 @@
   font-display: swap;
 }
 
-
-/* CUSTOM-PROPERETY */
-:root {
-  --text-color: #333;
-}
 
 /* GLOBAL */
 html {
@@ -64,6 +66,12 @@ img {
   height: auto;
 }
 
+*:focus {
+  outline: 2px dashed var(--outline-color);
+  outline-offset: 3px;
+}
+
+
 
 /* CONTAINER */
 .container {
@@ -77,6 +85,114 @@ img {
 
 
 /* MAIN-CONTENT */
-  .main-content {
-    flex-grow: 1;
+.main-content {
+  flex-grow: 1;
+}
+
+
+/* SITE-HEADER-INTRo-WRAPPER */
+.site-header-hero-wrapper {
+  background-image: url(../img/site-header-bg.jpg);
+}
+
+
+/* SITE-HEADER */
+.site-header {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.site-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+
+.site-header-logo-link {
+  display: flex;
+  text-decoration: none;
+}
+
+.site-header-logo-link:hover {
+  opacity: 0.8;
+}
+
+.site-header-logo-link:active {
+  opacity: 0.6;
+}
+
+.site-header-logo-img {
+  width: 235px;
+  height: 24px;
+  object-fit: contain;
+}
+
+
+/* SITE-NAV */
+.sitenav {
+  display: flex;
+  align-items: center;
+}
+
+.sitenav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sitenav-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.sitenac-link {
+  display: block;
+  font-size: 12px;
+  line-height: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: 0;
+  color: var(--text-color);
+}
+
+.sitenac-link:hover {
+  color: var(--accent-color-green);
+}
+
+.sitenac-link:active {
+  opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RETINA-BG */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+  .site-header-hero-wrapper {
+    background-image: url(../img/site-header-bg@2x.jpg);
   }
+}
