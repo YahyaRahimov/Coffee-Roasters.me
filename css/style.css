@@ -1,3 +1,38 @@
+
+/* FONTS */
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Medium.woff2") format("woff2"),
+    url("Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Regular.woff2") format("woff2"),
+    url("Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Bold.woff2") format("woff2"),
+    url("Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* CUSTOM-PROPERETY */
+:root {
+  --text-color: #333;
+}
+
 /* GLOBAL */
 html {
   box-sizing: border-box;
@@ -17,11 +52,11 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.75;
   background-color: #fff;
-  color: #222;
+  color: var(--text-color);
 }
 
 img {
@@ -33,7 +68,7 @@ img {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
   padding-left: 50px;
   padding-right: 50px;
   margin-left: auto;
